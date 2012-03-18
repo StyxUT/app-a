@@ -85,3 +85,21 @@ Migrating to CreatePeople (20120318022032)
   [1m[35m (154.2ms)[0m  CREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `age` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
   [1m[36m (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120318022032')[0m
   [1m[35m (16.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreatePeople (20120318022032)
+Migrating to CreateAddresses (20120318025731)
+  [1m[35m (59.8ms)[0m  CREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address1` varchar(255), `address2` varchar(255), `city` varchar(255), `state` varchar(255), `zip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (30.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120318025731')[0m
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+  [1m[36m (0.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Migrating to CreateAddresses (20120318025731)
+  [1m[36m (2.0ms)[0m  [1mDROP TABLE `addresses`[0m
+  [1m[35m (25.6ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20120318025731'
+  [1m[36m (11.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreatePeople (20120318022032)
+Migrating to CreateAddresses (20120318025731)
+  [1m[35m (54.7ms)[0m  CREATE TABLE `addresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address1` varchar(255), `address2` varchar(255), `city` varchar(255), `state` varchar(255), `zip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120318025731')[0m
+  [1m[35m (0.6ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
